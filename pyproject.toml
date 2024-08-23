@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "crewai_example_repo"
+version = "0.1.0"
+description = "crewai-example-repo using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = "^0.51.0" }
+
+[tool.poetry.scripts]
+crewai_example_repo = "crewai_example_repo.main:run"
+run_crew = "crewai_example_repo.main:run"
+train = "crewai_example_repo.main:train"
+replay = "crewai_example_repo.main:replay"
+test = "crewai_example_repo.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
